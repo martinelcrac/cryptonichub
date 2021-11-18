@@ -1,5 +1,4 @@
 local admins = {160135858,1570173214,2312,263961430,2635403611}
-
 local prefix = "c!"
 
 local funciones = {}
@@ -41,27 +40,21 @@ local function getPlayerByShortName(name)
 		local fullName = string.lower(plr.Name) -- lowercase here too
 		if shortName == string.sub(fullName,1,string.len(shortName)) then
 			return fullName
-		else
-			return nil
 		end
 	end
 end
 
 local function commands(msg, plr)
-	print(msg)
 	local Args = string.split(msg, " ")
 	local Command = Args[1]
 	local Target = Args[2]
-	print(Command..Target)
 
-	if getPlayerByShortName(Target) == game:GetService("Players").LocalPlayer.Name or Target == "all" and string.match(Command, prefix) then
+	if getPlayerByShortName(tostring(Target)) == string.lower(game:GetService("Players").LocalPlayer.Name) or Target == "all" and string.match(Command, prefix) then
 		Command = string.gsub(Command, prefix, "")
 		funciones[Command](plr)
-	else
-		print("No!")
 	end
 end
--- Jugador q está
+-- Jugador q estÃ¡
 for _,v in ipairs(game:GetService("Players"):GetPlayers()) do
 	if table.find(admins, v.UserId) then
 		v.Chatted:Connect(function(msg)
