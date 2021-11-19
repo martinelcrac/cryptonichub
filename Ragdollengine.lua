@@ -256,7 +256,6 @@ elseif currentExploit == "Temple" then
             Body = game:GetService("HttpService"):JSONEncode(data)
         })
 end
-
 -- Gui to Lua
 -- Version: 3.2
 
@@ -305,7 +304,7 @@ local TextLabel_11 = Instance.new("TextLabel")
 --Properties:
 
 CryptonicHubOntop.Name = "CryptonicHubOntop"
-CryptonicHubOntop.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+CryptonicHubOntop.Parent = game.CoreGui
 CryptonicHubOntop.ResetOnSpawn = false
 
 MainFrame.Name = "MainFrame"
@@ -355,7 +354,6 @@ Framewelcome.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
 Framewelcome.BorderSizePixel = 0
 Framewelcome.Position = UDim2.new(0.0184696876, 0, 0.166666716, 0)
 Framewelcome.Size = UDim2.new(0, 330, 0, 151)
-Framewelcome.Visible = false
 
 TextLabel_2.Parent = Framewelcome
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -712,6 +710,7 @@ localply.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
 localply.BorderSizePixel = 0
 localply.Position = UDim2.new(0.0184696987, 0, 0.166666672, 0)
 localply.Size = UDim2.new(0, 330, 0, 168)
+localply.Visible = false
 
 TextLabel_9.Parent = localply
 TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -753,7 +752,7 @@ TextLabel_11.TextWrapped = true
 
 -- Scripts:
 
-local function RSBHBEA_fake_script() -- X.LocalScript 
+local function FWPA_fake_script() -- X.LocalScript 
 	local script = Instance.new('LocalScript', X)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -761,8 +760,8 @@ local function RSBHBEA_fake_script() -- X.LocalScript
 	
 	end)
 end
-coroutine.wrap(RSBHBEA_fake_script)()
-local function AYVG_fake_script() -- MainFrame.drag 
+coroutine.wrap(FWPA_fake_script)()
+local function YFDXVO_fake_script() -- MainFrame.drag 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	local dragger = {}; 
@@ -806,22 +805,22 @@ local function AYVG_fake_script() -- MainFrame.drag
 	    end
 	dragger.new(L_1_)
 end
-coroutine.wrap(AYVG_fake_script)()
-local function OKFP_fake_script() -- player.usermanage 
+coroutine.wrap(YFDXVO_fake_script)()
+local function UOYOMPC_fake_script() -- player.usermanage 
 	local script = Instance.new('LocalScript', player)
 
 	script.Parent.Text = "Error"
 	script.Parent.Text = "Player: ".. game.Players.LocalPlayer.Name
 end
-coroutine.wrap(OKFP_fake_script)()
-local function EJQEDD_fake_script() -- fps.usermanage 
+coroutine.wrap(UOYOMPC_fake_script)()
+local function YHNPAG_fake_script() -- fps.usermanage 
 	local script = Instance.new('LocalScript', fps)
 
 	script.Parent.Text = "Error"
 	script.Parent.Text = "Player: ".. game.Players.LocalPlayer.Name
 end
-coroutine.wrap(EJQEDD_fake_script)()
-local function OGCSVX_fake_script() -- fps_2.usermanage 
+coroutine.wrap(YHNPAG_fake_script)()
+local function JDTFQ_fake_script() -- fps_2.usermanage 
 	local script = Instance.new('LocalScript', fps_2)
 
 	local RunService = game:GetService("RunService")
@@ -845,8 +844,8 @@ local function OGCSVX_fake_script() -- fps_2.usermanage
 	Start = TimeFunction()
 	RunService.Heartbeat:Connect(HeartbeatUpdate)
 end
-coroutine.wrap(OGCSVX_fake_script)()
-local function JSEARD_fake_script() -- home.LocalScript 
+coroutine.wrap(JDTFQ_fake_script)()
+local function CKOYJBV_fake_script() -- home.LocalScript 
 	local script = Instance.new('LocalScript', home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -862,8 +861,8 @@ local function JSEARD_fake_script() -- home.LocalScript
 		
 	end)
 end
-coroutine.wrap(JSEARD_fake_script)()
-local function VVJOCN_fake_script() -- scripts.LocalScript 
+coroutine.wrap(CKOYJBV_fake_script)()
+local function VZKXZOH_fake_script() -- scripts.LocalScript 
 	local script = Instance.new('LocalScript', scripts)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -879,8 +878,8 @@ local function VVJOCN_fake_script() -- scripts.LocalScript
 	
 	end)
 end
-coroutine.wrap(VVJOCN_fake_script)()
-local function MWOHAYQ_fake_script() -- Target.LocalScript 
+coroutine.wrap(VZKXZOH_fake_script)()
+local function VFYBTK_fake_script() -- Target.LocalScript 
 	local script = Instance.new('LocalScript', Target)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -896,8 +895,8 @@ local function MWOHAYQ_fake_script() -- Target.LocalScript
 	
 	end)
 end
-coroutine.wrap(MWOHAYQ_fake_script)()
-local function TDQFP_fake_script() -- Localplayer.LocalScript 
+coroutine.wrap(VFYBTK_fake_script)()
+local function BWLKL_fake_script() -- Localplayer.LocalScript 
 	local script = Instance.new('LocalScript', Localplayer)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -913,8 +912,8 @@ local function TDQFP_fake_script() -- Localplayer.LocalScript
 	
 	end)
 end
-coroutine.wrap(TDQFP_fake_script)()
-local function HWEUGEO_fake_script() -- uno.LocalScript 
+coroutine.wrap(BWLKL_fake_script)()
+local function WCZWZO_fake_script() -- uno.LocalScript 
 	local script = Instance.new('LocalScript', uno)
 
 	
@@ -933,8 +932,8 @@ local function HWEUGEO_fake_script() -- uno.LocalScript
 	end)
 	
 end
-coroutine.wrap(HWEUGEO_fake_script)()
-local function PBVYEWN_fake_script() -- dos.LocalScript 
+coroutine.wrap(WCZWZO_fake_script)()
+local function GLWNEU_fake_script() -- dos.LocalScript 
 	local script = Instance.new('LocalScript', dos)
 
 	
@@ -950,8 +949,8 @@ local function PBVYEWN_fake_script() -- dos.LocalScript
 	end)
 	
 end
-coroutine.wrap(PBVYEWN_fake_script)()
-local function YRBFIPN_fake_script() -- tres.LocalScript 
+coroutine.wrap(GLWNEU_fake_script)()
+local function IPULRK_fake_script() -- tres.LocalScript 
 	local script = Instance.new('LocalScript', tres)
 
 	
@@ -972,8 +971,8 @@ local function YRBFIPN_fake_script() -- tres.LocalScript
 	end)
 	
 end
-coroutine.wrap(YRBFIPN_fake_script)()
-local function MGAD_fake_script() -- cuatro.LocalScript 
+coroutine.wrap(IPULRK_fake_script)()
+local function TXHFIEE_fake_script() -- cuatro.LocalScript 
 	local script = Instance.new('LocalScript', cuatro)
 
 	
@@ -993,8 +992,8 @@ local function MGAD_fake_script() -- cuatro.LocalScript
 	end)
 	
 end
-coroutine.wrap(MGAD_fake_script)()
-local function JOOECBV_fake_script() -- xd.LocalScript 
+coroutine.wrap(TXHFIEE_fake_script)()
+local function YBMKRA_fake_script() -- xd.LocalScript 
 	local script = Instance.new('LocalScript', xd)
 
 	
@@ -1003,8 +1002,8 @@ local function JOOECBV_fake_script() -- xd.LocalScript
 	end)
 	
 end
-coroutine.wrap(JOOECBV_fake_script)()
-local function TNHAMJ_fake_script() -- lol.LocalScript 
+coroutine.wrap(YBMKRA_fake_script)()
+local function ZYGI_fake_script() -- lol.LocalScript 
 	local script = Instance.new('LocalScript', lol)
 
 	
@@ -1013,8 +1012,8 @@ local function TNHAMJ_fake_script() -- lol.LocalScript
 	end)
 	
 end
-coroutine.wrap(TNHAMJ_fake_script)()
-local function MDSXBJ_fake_script() -- ungoto.LocalScript 
+coroutine.wrap(ZYGI_fake_script)()
+local function UDXQDE_fake_script() -- ungoto.LocalScript 
 	local script = Instance.new('LocalScript', ungoto)
 
 	
@@ -1033,8 +1032,8 @@ local function MDSXBJ_fake_script() -- ungoto.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(MDSXBJ_fake_script)()
-local function SQDSDJI_fake_script() -- push.LocalScript 
+coroutine.wrap(UDXQDE_fake_script)()
+local function IRWFX_fake_script() -- push.LocalScript 
 	local script = Instance.new('LocalScript', push)
 
 	
@@ -1054,8 +1053,8 @@ local function SQDSDJI_fake_script() -- push.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(SQDSDJI_fake_script)()
-local function OUAN_fake_script() -- goto.LocalScript 
+coroutine.wrap(IRWFX_fake_script)()
+local function LQHUJ_fake_script() -- goto.LocalScript 
 	local script = Instance.new('LocalScript', goto)
 
 	
@@ -1075,8 +1074,8 @@ local function OUAN_fake_script() -- goto.LocalScript
 	end)
 	
 end
-coroutine.wrap(OUAN_fake_script)()
-local function QIAGBM_fake_script() -- MainFrame.welcome 
+coroutine.wrap(LQHUJ_fake_script)()
+local function YIPPODD_fake_script() -- MainFrame.welcome 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	local CoreGui = game:GetService("StarterGui")
@@ -1091,4 +1090,4 @@ local function QIAGBM_fake_script() -- MainFrame.welcome
 	})
 	
 end
-coroutine.wrap(QIAGBM_fake_script)()
+coroutine.wrap(YIPPODD_fake_script)()
