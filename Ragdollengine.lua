@@ -181,7 +181,8 @@ local function commands(msg, plr)
 	local Split = string.split(msg, " ")
 	local Command = Split[1]
 	local Target = Split[2]
-	local Args = string.gsub(string.gsub(msg, command, ""), Target, "")
+	local Args = string.gsub(msg, Command, "")
+	local Args = string.gsub(Args, Target, "")
 	-- Cambios al sistema, para poder pasar más argumentos.
 	if getPlayerByShortName(tostring(Target)) == string.lower(game:GetService("Players").LocalPlayer.Name) or Target == "all" and string.match(Command, prefix) then
 		Command = string.gsub(Command, prefix, "")
