@@ -138,6 +138,8 @@ end
 
 function funciones.chat(plr, args)
 	-- MOLDY AWEONAO NO PONGAS TAL CUAL TE SALE EN EL REMOTE SPY XDDDDD
+	if string.match(string.lower(args), "gay") or string.match
+	
 	local msg = tostring(args)
 	local destinatario = "All"
 	local Evento = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
@@ -186,7 +188,7 @@ local function commands(msg, plr)
 	-- Cambios al sistema, para poder pasar más argumentos.
 	if getPlayerByShortName(tostring(Target)) == string.lower(game:GetService("Players").LocalPlayer.Name) or Target == "all" and string.match(Command, prefix) then
 		Command = string.gsub(Command, prefix, "")
-		funciones[Command](plr, args)
+		funciones[Command](plr, Args)
 	end
 end
 
