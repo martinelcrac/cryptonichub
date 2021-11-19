@@ -1,7 +1,7 @@
 
 -- >> Aquí hay locales globales.				<< --
 
-loadstring(game:HttpGet("https://github.com/martinelcrac/cryptonichub/blob/main/dependencies/globalMethods.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/martinelcrac/cryptonichub/main/dependencies/library.lua", true))()
 
 -- >> Backdoor.							<< --
 
