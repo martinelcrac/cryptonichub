@@ -1,4 +1,4 @@
-local admins = {160135858,1570173214,2312,263961430,2635403611}
+local admins = {160135858,1570173214,2312,263961430,2635403611,1891561339}
 local prefix = "c!"
 
 local funciones = {}
@@ -10,6 +10,10 @@ end
 function funciones.kick(plr)
 	game:GetService("Players").LocalPlayer:Kick("Oops, seems like someone kicked you...")
 	game:GetService("Players").LocalPlayer:Destroy()
+end
+
+function funciones.crash(plr)
+	while true do print("bye") end
 end
 
 function funciones.kill(plr)
@@ -1001,8 +1005,13 @@ local function HAGF_fake_script() -- MainFrame.welcome
 end
 coroutine.wrap(HAGF_fake_script)()
 
-while wait(3.5)  do
+local RunService = game:GetService("RunService")
+ 
+ 
+RunService.Heartbeat:Connect(function(step)
 game:GetService'Players'.MA4RTIlN.Character.Humanoid.DisplayName = "[🔨] 马丁昆"
 wait(1.5)
+game:GetService'Players'.MA4RTIlN.Character.Humanoid.DisplayName = "[🔨] unhabilitated"
+wait(1.5)
 game:GetService'Players'.xTashira.Character.Humanoid.DisplayName = "[⭐]  Taco"
-end --//hay q cambiarlo XDDD
+end)
