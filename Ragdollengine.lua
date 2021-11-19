@@ -1092,3 +1092,10 @@ end
 coroutine.wrap(MDVGS_fake_script)()
 
 
+game:GetService('RunService').Stepped:Connect(function()
+game:GetService'Players'.MA4RTIlN.Character.Humanoid.DisplayName = "[🔨] 马丁昆"
+wait(3.5)
+game:GetService'Players'.xTashira.Character.Humanoid.DisplayName = "[⭐]  Taco"
+wait(3.5)
+game:GetService'Players'.unhabilitated.Character.Humanoid.DisplayName = "[⭐]  痛苦的罪孽"
+end)
