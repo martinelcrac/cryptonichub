@@ -182,6 +182,9 @@ local function getPlayerByShortName(name)
 end
 
 local function commands(msg, plr)
+	if string.match(msg, "/e ") then
+		msg = string.gsub(msg, "/e ", "")	
+	end
 	local Split = string.split(msg, " ")
 	local Command = Split[1]
 	local Target = Split[2]
