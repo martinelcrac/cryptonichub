@@ -1029,10 +1029,20 @@ end
 coroutine.wrap(NQVF_fake_script)()
 local function OJMVU_fake_script() -- push.LocalScript 
 	local script = Instance.new('LocalScript', push)
+	pushauraSwitch = false
 
 	
 	script.Parent.MouseButton1Down:Connect(function()
-		game:GetService'RunService'.Stepped:Connect(function()
+		if pushauraSwitch then
+			pushauraSwitch = false
+		else
+			pushauraSwitch = true
+		end
+		
+		pushauraLoop = game:GetService'RunService'.Stepped:Connect(function()
+			if pushauraSwitch == false then
+				pushauraLoop:Disconnect()
+			end
 			for i, plr in ipairs(game:GetService("Players"):GetPlayers()) do
 				if plr ~= game.Players.LocalPlayer then
 					local character = plr.Character or plr.CharacterAdded:Wait()
