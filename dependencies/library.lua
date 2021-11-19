@@ -4,7 +4,19 @@
   If your exploit has a different function, create an issue so we can update it. 
 
 ]]
+local githubUsername = "martinelcrac"
+local gitRepName = "cryptonichub"
+local dependenciesFolderName = "dependencies"
+local libraryFileName = "library"
+
 local module = {
+    githubRep = {
+        Profile = "https://github.com/" .. githubUsername,
+        Repository = Profile .. "/" .. gitRepName
+        Main = Repository .. "/tree/main"
+        Dependencies = Main .. "/" .. dependenciesFolderName
+        Lib = Dependencies .. "/" .. libraryFileName .. ".lua"
+    },
     globalMethods = {
         checkCaller = checkcaller,
         newCClosure = newcclosure,
