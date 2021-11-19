@@ -5,6 +5,16 @@
 
 --]===]
     
+ --[[  
+local commonStuff = {
+    githubRep = {
+        Rep = "https://github.com/martinelcrac/cryptonichub",
+        Main = Rep .. "/tree/main",
+        Dependencies = ""
+    }
+}
+]]
+    
 local globalMethods = {
     checkCaller = checkcaller,
     newCClosure = newcclosure,
