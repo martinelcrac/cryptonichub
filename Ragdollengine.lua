@@ -257,7 +257,6 @@ elseif currentExploit == "Temple" then
         })
 end
 
-
 -- Gui to Lua
 -- Version: 3.2
 
@@ -293,21 +292,20 @@ local lol = Instance.new("TextButton")
 local target = Instance.new("Frame")
 local TextLabel_7 = Instance.new("TextLabel")
 local TextLabel_8 = Instance.new("TextLabel")
-local push = Instance.new("TextButton")
-local goto = Instance.new("TextButton")
 local ungoto = Instance.new("TextButton")
+local push = Instance.new("TextButton")
 local id = Instance.new("TextBox")
+local goto = Instance.new("TextButton")
 local Roundify = Instance.new("ImageLabel")
 local localply = Instance.new("Frame")
 local TextLabel_9 = Instance.new("TextLabel")
 local TextLabel_10 = Instance.new("TextLabel")
-local iy = Instance.new("TextButton")
-local goto_2 = Instance.new("TextButton")
+local TextLabel_11 = Instance.new("TextLabel")
 
 --Properties:
 
 CryptonicHubOntop.Name = "CryptonicHubOntop"
-CryptonicHubOntop.Parent = game.CoreGui
+CryptonicHubOntop.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 CryptonicHubOntop.ResetOnSpawn = false
 
 MainFrame.Name = "MainFrame"
@@ -338,7 +336,6 @@ TextLabel.Position = UDim2.new(-0.0554185919, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 187, 0, 24)
 TextLabel.Font = Enum.Font.SourceSansBold
 TextLabel.Text = "CRYPTONIC <font color=\"#FFA500\">Hub</font>"
-TextLabel.RichText = true
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
@@ -358,6 +355,7 @@ Framewelcome.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
 Framewelcome.BorderSizePixel = 0
 Framewelcome.Position = UDim2.new(0.0184696876, 0, 0.166666716, 0)
 Framewelcome.Size = UDim2.new(0, 330, 0, 151)
+Framewelcome.Visible = false
 
 TextLabel_2.Parent = Framewelcome
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -446,7 +444,7 @@ TextLabel_4.BackgroundTransparency = 1.000
 TextLabel_4.Position = UDim2.new(0.390909106, 0, 0.91390729, 0)
 TextLabel_4.Size = UDim2.new(0, 200, 0, 13)
 TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = "Made by martiin#0015 and wmw#7622"
+TextLabel_4.Text = "Made by Martiin#4420 and wmw#7622"
 TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.TextScaled = true
 TextLabel_4.TextSize = 14.000
@@ -528,7 +526,7 @@ TextLabel_5.BackgroundTransparency = 1.000
 TextLabel_5.Position = UDim2.new(0.393939406, 0, 0.991288245, 0)
 TextLabel_5.Size = UDim2.new(0, 200, 0, 13)
 TextLabel_5.Font = Enum.Font.SourceSans
-TextLabel_5.Text = "Made by martiin#0015 and wmw#7622"
+TextLabel_5.Text = "Made by Martiin#4420 and wmw#7622"
 TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.TextScaled = true
 TextLabel_5.TextSize = 14.000
@@ -625,50 +623,28 @@ target.Visible = false
 TextLabel_7.Parent = target
 TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.BackgroundTransparency = 1.000
-TextLabel_7.Position = UDim2.new(0.393939406, 0, 0.991288245, 0)
-TextLabel_7.Size = UDim2.new(0, 200, 0, 13)
+TextLabel_7.Position = UDim2.new(0.300000012, 0, -0.0397351012, 0)
+TextLabel_7.Size = UDim2.new(0, 200, 0, 33)
 TextLabel_7.Font = Enum.Font.SourceSans
-TextLabel_7.Text = "Made by martiin#0015 and wmw#7622"
+TextLabel_7.Text = "Target Player"
 TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.TextScaled = true
 TextLabel_7.TextSize = 14.000
-TextLabel_7.TextTransparency = 0.680
 TextLabel_7.TextWrapped = true
-TextLabel_7.TextXAlignment = Enum.TextXAlignment.Right
 
 TextLabel_8.Parent = target
 TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.BackgroundTransparency = 1.000
-TextLabel_8.Position = UDim2.new(0.300000012, 0, -0.0397351012, 0)
-TextLabel_8.Size = UDim2.new(0, 200, 0, 33)
+TextLabel_8.Position = UDim2.new(0.393939406, 0, 0.991288245, 0)
+TextLabel_8.Size = UDim2.new(0, 200, 0, 13)
 TextLabel_8.Font = Enum.Font.SourceSans
-TextLabel_8.Text = "Target Player"
+TextLabel_8.Text = "Made by Martiin#4420 and wmw#7622"
 TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.TextScaled = true
 TextLabel_8.TextSize = 14.000
+TextLabel_8.TextTransparency = 0.680
 TextLabel_8.TextWrapped = true
-
-push.Name = "push"
-push.Parent = target
-push.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
-push.BorderSizePixel = 0
-push.Position = UDim2.new(0.24242425, 0, 0.473825276, 0)
-push.Size = UDim2.new(0, 115, 0, 36)
-push.Font = Enum.Font.SourceSansSemibold
-push.Text = "PushAura + antiragdoll "
-push.TextColor3 = Color3.fromRGB(255, 255, 255)
-push.TextSize = 14.000
-
-goto.Name = "goto"
-goto.Parent = target
-goto.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
-goto.BorderSizePixel = 0
-goto.Position = UDim2.new(0.615151525, 0, 0.473825276, 0)
-goto.Size = UDim2.new(0, 115, 0, 36)
-goto.Font = Enum.Font.SourceSansSemibold
-goto.Text = "LoopGoto"
-goto.TextColor3 = Color3.fromRGB(255, 255, 255)
-goto.TextSize = 14.000
+TextLabel_8.TextXAlignment = Enum.TextXAlignment.Right
 
 ungoto.Name = "ungoto"
 ungoto.Parent = target
@@ -681,6 +657,17 @@ ungoto.Text = "UnLoopGoto"
 ungoto.TextColor3 = Color3.fromRGB(255, 255, 255)
 ungoto.TextSize = 14.000
 
+push.Name = "push"
+push.Parent = target
+push.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+push.BorderSizePixel = 0
+push.Position = UDim2.new(0.24242425, 0, 0.473825276, 0)
+push.Size = UDim2.new(0, 115, 0, 36)
+push.Font = Enum.Font.SourceSansSemibold
+push.Text = "PushAura + antiragdoll "
+push.TextColor3 = Color3.fromRGB(255, 255, 255)
+push.TextSize = 14.000
+
 id.Name = "id"
 id.Parent = target
 id.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
@@ -692,6 +679,17 @@ id.PlaceholderText = "Player"
 id.Text = ""
 id.TextColor3 = Color3.fromRGB(0, 0, 0)
 id.TextSize = 14.000
+
+goto.Name = "goto"
+goto.Parent = target
+goto.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+goto.BorderSizePixel = 0
+goto.Position = UDim2.new(0.615151525, 0, 0.473825276, 0)
+goto.Size = UDim2.new(0, 115, 0, 36)
+goto.Font = Enum.Font.SourceSansSemibold
+goto.Text = "LoopGoto"
+goto.TextColor3 = Color3.fromRGB(255, 255, 255)
+goto.TextSize = 14.000
 
 Roundify.Name = "Roundify"
 Roundify.Parent = MainFrame
@@ -706,29 +704,6 @@ Roundify.ImageColor3 = Color3.fromRGB(62, 62, 62)
 Roundify.ScaleType = Enum.ScaleType.Slice
 Roundify.SliceCenter = Rect.new(100, 100, 100, 100)
 Roundify.SliceScale = 0.040
-
-localply.Name = "localply"
-localply.Parent = MainFrame
-localply.Active = true
-localply.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
-localply.BorderSizePixel = 0
-localply.Position = UDim2.new(0.0184696987, 0, 0.166666672, 0)
-localply.Size = UDim2.new(0, 330, 0, 168)
-localply.Visible = false
-
-TextLabel_9.Parent = localply
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BackgroundTransparency = 1.000
-TextLabel_9.Position = UDim2.new(0.393939406, 0, 0.991288245, 0)
-TextLabel_9.Size = UDim2.new(0, 200, 0, 13)
-TextLabel_9.Font = Enum.Font.SourceSans
-TextLabel_9.Text = "Made by martiin#0015 and wmw#7622"
-TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.TextScaled = true
-TextLabel_9.TextSize = 14.000
-TextLabel_9.TextTransparency = 0.680
-TextLabel_9.TextWrapped = true
-TextLabel_9.TextXAlignment = Enum.TextXAlignment.Right
 
 localply.Name = "localply"
 localply.Parent = MainFrame
@@ -778,7 +753,7 @@ TextLabel_11.TextWrapped = true
 
 -- Scripts:
 
-local function XRNWAPR_fake_script() -- X.LocalScript 
+local function RSBHBEA_fake_script() -- X.LocalScript 
 	local script = Instance.new('LocalScript', X)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -786,8 +761,8 @@ local function XRNWAPR_fake_script() -- X.LocalScript
 	
 	end)
 end
-coroutine.wrap(XRNWAPR_fake_script)()
-local function ZDOQCZL_fake_script() -- MainFrame.drag 
+coroutine.wrap(RSBHBEA_fake_script)()
+local function AYVG_fake_script() -- MainFrame.drag 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	local dragger = {}; 
@@ -831,22 +806,22 @@ local function ZDOQCZL_fake_script() -- MainFrame.drag
 	    end
 	dragger.new(L_1_)
 end
-coroutine.wrap(ZDOQCZL_fake_script)()
-local function FMQYK_fake_script() -- player.usermanage 
+coroutine.wrap(AYVG_fake_script)()
+local function OKFP_fake_script() -- player.usermanage 
 	local script = Instance.new('LocalScript', player)
 
 	script.Parent.Text = "Error"
 	script.Parent.Text = "Player: ".. game.Players.LocalPlayer.Name
 end
-coroutine.wrap(FMQYK_fake_script)()
-local function ZWEK_fake_script() -- fps.usermanage 
+coroutine.wrap(OKFP_fake_script)()
+local function EJQEDD_fake_script() -- fps.usermanage 
 	local script = Instance.new('LocalScript', fps)
 
 	script.Parent.Text = "Error"
 	script.Parent.Text = "Player: ".. game.Players.LocalPlayer.Name
 end
-coroutine.wrap(ZWEK_fake_script)()
-local function DWYKQZY_fake_script() -- fps_2.usermanage 
+coroutine.wrap(EJQEDD_fake_script)()
+local function OGCSVX_fake_script() -- fps_2.usermanage 
 	local script = Instance.new('LocalScript', fps_2)
 
 	local RunService = game:GetService("RunService")
@@ -870,8 +845,8 @@ local function DWYKQZY_fake_script() -- fps_2.usermanage
 	Start = TimeFunction()
 	RunService.Heartbeat:Connect(HeartbeatUpdate)
 end
-coroutine.wrap(DWYKQZY_fake_script)()
-local function JBNJYN_fake_script() -- home.LocalScript 
+coroutine.wrap(OGCSVX_fake_script)()
+local function JSEARD_fake_script() -- home.LocalScript 
 	local script = Instance.new('LocalScript', home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -887,8 +862,8 @@ local function JBNJYN_fake_script() -- home.LocalScript
 		
 	end)
 end
-coroutine.wrap(JBNJYN_fake_script)()
-local function CSEVS_fake_script() -- scripts.LocalScript 
+coroutine.wrap(JSEARD_fake_script)()
+local function VVJOCN_fake_script() -- scripts.LocalScript 
 	local script = Instance.new('LocalScript', scripts)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -904,8 +879,8 @@ local function CSEVS_fake_script() -- scripts.LocalScript
 	
 	end)
 end
-coroutine.wrap(CSEVS_fake_script)()
-local function SKHACYN_fake_script() -- Target.LocalScript 
+coroutine.wrap(VVJOCN_fake_script)()
+local function MWOHAYQ_fake_script() -- Target.LocalScript 
 	local script = Instance.new('LocalScript', Target)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -921,8 +896,8 @@ local function SKHACYN_fake_script() -- Target.LocalScript
 	
 	end)
 end
-coroutine.wrap(SKHACYN_fake_script)()
-local function PXTZ_fake_script() -- Localplayer.LocalScript 
+coroutine.wrap(MWOHAYQ_fake_script)()
+local function TDQFP_fake_script() -- Localplayer.LocalScript 
 	local script = Instance.new('LocalScript', Localplayer)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -938,8 +913,8 @@ local function PXTZ_fake_script() -- Localplayer.LocalScript
 	
 	end)
 end
-coroutine.wrap(PXTZ_fake_script)()
-local function VAXGAOI_fake_script() -- uno.LocalScript 
+coroutine.wrap(TDQFP_fake_script)()
+local function HWEUGEO_fake_script() -- uno.LocalScript 
 	local script = Instance.new('LocalScript', uno)
 
 	
@@ -958,8 +933,8 @@ local function VAXGAOI_fake_script() -- uno.LocalScript
 	end)
 	
 end
-coroutine.wrap(VAXGAOI_fake_script)()
-local function EGXWYD_fake_script() -- dos.LocalScript 
+coroutine.wrap(HWEUGEO_fake_script)()
+local function PBVYEWN_fake_script() -- dos.LocalScript 
 	local script = Instance.new('LocalScript', dos)
 
 	
@@ -975,8 +950,8 @@ local function EGXWYD_fake_script() -- dos.LocalScript
 	end)
 	
 end
-coroutine.wrap(EGXWYD_fake_script)()
-local function WBOW_fake_script() -- tres.LocalScript 
+coroutine.wrap(PBVYEWN_fake_script)()
+local function YRBFIPN_fake_script() -- tres.LocalScript 
 	local script = Instance.new('LocalScript', tres)
 
 	
@@ -997,15 +972,15 @@ local function WBOW_fake_script() -- tres.LocalScript
 	end)
 	
 end
-coroutine.wrap(WBOW_fake_script)()
-local function KWOHCO_fake_script() -- cuatro.LocalScript 
+coroutine.wrap(YRBFIPN_fake_script)()
+local function MGAD_fake_script() -- cuatro.LocalScript 
 	local script = Instance.new('LocalScript', cuatro)
 
 	
 	script.Parent.MouseButton1Down:Connect(function()
-		local mt = getMetatable(game);
+		local mt = getrawmetatable(game);
 	
-		old = hookFunction(mt.__namecall, function(...)
+		old = hookfunction(mt.__namecall, function(...)
 			local args = {...}
 			local self = args[1]
 			local method = getnamecallmethod();
@@ -1018,8 +993,8 @@ local function KWOHCO_fake_script() -- cuatro.LocalScript
 	end)
 	
 end
-coroutine.wrap(KWOHCO_fake_script)()
-local function RGTUTLA_fake_script() -- xd.LocalScript 
+coroutine.wrap(MGAD_fake_script)()
+local function JOOECBV_fake_script() -- xd.LocalScript 
 	local script = Instance.new('LocalScript', xd)
 
 	
@@ -1028,8 +1003,8 @@ local function RGTUTLA_fake_script() -- xd.LocalScript
 	end)
 	
 end
-coroutine.wrap(RGTUTLA_fake_script)()
-local function NQVF_fake_script() -- lol.LocalScript 
+coroutine.wrap(JOOECBV_fake_script)()
+local function TNHAMJ_fake_script() -- lol.LocalScript 
 	local script = Instance.new('LocalScript', lol)
 
 	
@@ -1038,23 +1013,33 @@ local function NQVF_fake_script() -- lol.LocalScript
 	end)
 	
 end
-coroutine.wrap(NQVF_fake_script)()
-local function OJMVU_fake_script() -- push.LocalScript 
+coroutine.wrap(TNHAMJ_fake_script)()
+local function MDSXBJ_fake_script() -- ungoto.LocalScript 
+	local script = Instance.new('LocalScript', ungoto)
+
+	
+	
+	
+	script.Parent.MouseButton1Down:Connect(function()
+	
+		local plrs = game:GetService("Players")
+		local plr  = plrs.LocalPlayer
+		local playerTextBox = script.Parent.Parent.id
+		script.Parent.MouseButton1Down:Connect(function()
+			_G.xd = false
+			while _G.xd do
+				plr.Character.HumanoidRootPart.CFrame = plrs[tostring(playerTextBox.Text)].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0.9)
+			end
+		end)
+	end)
+end
+coroutine.wrap(MDSXBJ_fake_script)()
+local function SQDSDJI_fake_script() -- push.LocalScript 
 	local script = Instance.new('LocalScript', push)
-	pushauraSwitch = false
 
 	
 	script.Parent.MouseButton1Down:Connect(function()
-		if pushauraSwitch then
-			pushauraSwitch = false
-		else
-			pushauraSwitch = true
-		end
-		
-		pushauraLoop = game:GetService'RunService'.Stepped:Connect(function()
-			if pushauraSwitch == false then
-				pushauraLoop:Disconnect()
-			end
+		game:GetService'RunService'.Stepped:Connect(function()
 			for i, plr in ipairs(game:GetService("Players"):GetPlayers()) do
 				if plr ~= game.Players.LocalPlayer then
 					local character = plr.Character or plr.CharacterAdded:Wait()
@@ -1069,8 +1054,8 @@ local function OJMVU_fake_script() -- push.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(OJMVU_fake_script)()
-local function VNSO_fake_script() -- goto.LocalScript 
+coroutine.wrap(SQDSDJI_fake_script)()
+local function OUAN_fake_script() -- goto.LocalScript 
 	local script = Instance.new('LocalScript', goto)
 
 	
@@ -1090,47 +1075,8 @@ local function VNSO_fake_script() -- goto.LocalScript
 	end)
 	
 end
-coroutine.wrap(VNSO_fake_script)()
-local function IWIYET_fake_script() -- ungoto.LocalScript 
-	local script = Instance.new('LocalScript', ungoto)
-
-	
-	
-	
-	script.Parent.MouseButton1Down:Connect(function()
-	
-		local plrs = game:GetService("Players")
-		local plr  = plrs.LocalPlayer
-		local playerTextBox = script.Parent.Parent.id
-		script.Parent.MouseButton1Down:Connect(function()
-			_G.xd = false
-			while _G.xd do
-				plr.Character.HumanoidRootPart.CFrame = plrs[tostring(playerTextBox.Text)].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0.9)
-			end
-		end)
-	end)
-end
-coroutine.wrap(IWIYET_fake_script)()
-local function FHCG_fake_script() -- iy.LocalScript 
-	local script = Instance.new('LocalScript', iy)
-
-	
-	script.Parent.MouseButton1Down:Connect(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-	end)
-end
-coroutine.wrap(FHCG_fake_script)()
-local function EMZX_fake_script() -- goto_2.LocalScript 
-	local script = Instance.new('LocalScript', goto_2)
-
-	
-	script.Parent.MouseButton1Down:Connect(function()
-	print("lol")
-	end)
-	
-end
-coroutine.wrap(EMZX_fake_script)()
-local function HAGF_fake_script() -- MainFrame.welcome 
+coroutine.wrap(OUAN_fake_script)()
+local function QIAGBM_fake_script() -- MainFrame.welcome 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	local CoreGui = game:GetService("StarterGui")
@@ -1145,4 +1091,4 @@ local function HAGF_fake_script() -- MainFrame.welcome
 	})
 	
 end
-coroutine.wrap(HAGF_fake_script)()
+coroutine.wrap(QIAGBM_fake_script)()
