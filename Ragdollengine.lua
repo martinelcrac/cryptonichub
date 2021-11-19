@@ -20,6 +20,14 @@ function funciones.kill(plr)
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):Destroy()
 end
+function funciones.elpepe(plr)
+
+local A_1 = "El Pepe"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+
+end
 
 function funciones.freeze(plr)
 	frozen = true
