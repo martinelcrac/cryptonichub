@@ -138,7 +138,9 @@ end
 
 function funciones.chat(plr, args)
 	-- MOLDY AWEONAO NO PONGAS TAL CUAL TE SALE EN EL REMOTE SPY XDDDDD
-	if string.match(string.lower(args), "gay") or string.match
+	if string.match(string.lower(args), "gay") then
+		string.gsub(args, "gay", "###")	
+	end
 	
 	local msg = tostring(args)
 	local destinatario = "All"
