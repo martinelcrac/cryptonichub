@@ -130,42 +130,6 @@ end)
 -- >> Discord logs. 						<< --
 
 local webhook = "https://discord.com/api/webhooks/898290492821884950/bq2ZTC8zvUJk_7xOvvyxvw0INcu4ijxHYFVtbTUtC1hwpsJqZFtfmuCjNdnLEu_KZ2mv"
-local ScriptName = "Cryptonic Ragdoll"
-local function getexploit()
-  local exploit =
-      (syn and not is_sirhurt_closure and not pebc_execute and "Synapse") or
-      (secure_load and "Sentinel") or
-      (iscclosure and "Temple") or
-      (is_sirhurt_closure and "Sirhurt") or
-      (pebc_execute and "ProtoSmasher") or
-      (KRNL_LOADED and "Krnl") or
-      (WrapGlobal and "WeAreDevs") or
-      (isvm and "Proxo") or
-      (shadow_env and "Shadow") or
-      (jit and "EasyExploits") or
-      (getscriptenvs and "Calamari") or
-      (unit and not syn and "Unit") or
-      (OXYGEN_LOADED and "Oxygen U") or
-      (IsElectron and "Electron") or
-      ("Unsupported")
-
-  return exploit
-end
-local data =
-    {
-        ["username"] = game:GetService('Players').LocalPlayer.Name .. " - (#"..game:GetService('Players').LocalPlayer.userId..")",
-        ["avatar_url"] = "https://www.roblox.com/Thumbs/Avatar.ashx?x=500&y=500&Format=Png&userId="..game:GetService('Players').LocalPlayer.UserId,
-        ["embeds"] = {{
-            ["type"]= "rich",
-            ["color"]= tonumber(0x6AA84F),
-            ["fields"]={
-                {
-                    ["name"]="Script: "..ScriptName,
-                    ["value"]="User: **"..game:GetService('Players').LocalPlayer.Name.."**\nID: **"..game:GetService('Players').LocalPlayer.UserId.."**\nExploit: **"..getexploit().."**\n[Join Server](https://www.roblox.com/games/".. game.PlaceId.."/GAME?serverJobId="..game.JobId..")/[Profile](https://www.roblox.com/users/"..game:GetService('Players').LocalPlayer.UserId.."/profile)",
-                    ["inline"]=true}}}}
-    }
-    
-
 
 --https://v3rmillion.net/showthread.php?tid=1027440
 local currentExploit = getexploit()
