@@ -304,7 +304,7 @@ local TextLabel_11 = Instance.new("TextLabel")
 --Properties:
 
 CryptonicHubOntop.Name = "CryptonicHubOntop"
-CryptonicHubOntop.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+CryptonicHubOntop.Parent = game.CoreGui
 CryptonicHubOntop.ResetOnSpawn = false
 
 MainFrame.Name = "MainFrame"
