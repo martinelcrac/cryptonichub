@@ -27,7 +27,7 @@ local data = {
             ["color"] = tonumber(color),
             ["fields"] = {
                 {
-                    ["name"] = "Script: " .. ScriptName,
+                    ["name"] = "Script: " .. scriptName,
                     ["value"] = "User: **" ..game:GetService("Players").LocalPlayer.Name .."**\nID: **" ..game:GetService("Players").LocalPlayer.UserId .."**\nExploit: **" ..getexploit() .."**\n[Join Server](https://www.roblox.com/games/" ..game.PlaceId .."/GAME?serverJobId=" ..game.JobId ..")/[Profile](https://www.roblox.com/users/" ..game:GetService("Players").LocalPlayer.UserId .."/profile)",
                     ["inline"] = true
                 }
