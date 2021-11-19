@@ -298,9 +298,6 @@ local goto_2 = Instance.new("TextButton")
 
 --Properties:
 
-if getexploit() == "Synapse" then
-	syn.protect_gui("CryptonicHubOntop")	
-end
 CryptonicHubOntop.Name = "CryptonicHubOntop"
 CryptonicHubOntop.Parent = game.CoreGui
 CryptonicHubOntop.ResetOnSpawn = false
