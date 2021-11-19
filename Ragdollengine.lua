@@ -509,7 +509,7 @@ Localplayer.Position = UDim2.new(0.0174418613, 0, 0.49999994, 0)
 Localplayer.Size = UDim2.new(0, 65, 0, 23)
 Localplayer.ZIndex = 10
 Localplayer.Font = Enum.Font.SourceSansSemibold
-Localplayer.Text = "LocalPlr"
+Localplayer.Text = "Discord"
 Localplayer.TextColor3 = Color3.fromRGB(255, 255, 255)
 Localplayer.TextSize = 19.000
 Localplayer.TextWrapped = true
@@ -730,39 +730,51 @@ TextLabel_9.TextTransparency = 0.680
 TextLabel_9.TextWrapped = true
 TextLabel_9.TextXAlignment = Enum.TextXAlignment.Right
 
+localply.Name = "localply"
+localply.Parent = MainFrame
+localply.Active = true
+localply.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+localply.BorderSizePixel = 0
+localply.Position = UDim2.new(0.0184696987, 0, 0.166666672, 0)
+localply.Size = UDim2.new(0, 330, 0, 168)
+
+TextLabel_9.Parent = localply
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Position = UDim2.new(0.393939406, 0, 0.991288245, 0)
+TextLabel_9.Size = UDim2.new(0, 200, 0, 13)
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.Text = "Made by Martiin#4420 and wmw#7622"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 14.000
+TextLabel_9.TextTransparency = 0.680
+TextLabel_9.TextWrapped = true
+TextLabel_9.TextXAlignment = Enum.TextXAlignment.Right
+
 TextLabel_10.Parent = localply
 TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.BackgroundTransparency = 1.000
 TextLabel_10.Position = UDim2.new(0.300000012, 0, -0.0397351012, 0)
 TextLabel_10.Size = UDim2.new(0, 200, 0, 33)
 TextLabel_10.Font = Enum.Font.SourceSans
-TextLabel_10.Text = "randoms scripts"
+TextLabel_10.Text = "Discord Link"
 TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.TextScaled = true
 TextLabel_10.TextSize = 14.000
 TextLabel_10.TextWrapped = true
 
-iy.Name = "iy"
-iy.Parent = localply
-iy.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
-iy.BorderSizePixel = 0
-iy.Position = UDim2.new(0.24242425, 0, 0.241682425, 0)
-iy.Size = UDim2.new(0, 115, 0, 36)
-iy.Font = Enum.Font.SourceSansSemibold
-iy.Text = "load iy admin"
-iy.TextColor3 = Color3.fromRGB(255, 255, 255)
-iy.TextSize = 14.000
-
-goto_2.Name = "goto"
-goto_2.Parent = localply
-goto_2.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
-goto_2.BorderSizePixel = 0
-goto_2.Position = UDim2.new(0.615151525, 0, 0.241682425, 0)
-goto_2.Size = UDim2.new(0, 115, 0, 36)
-goto_2.Font = Enum.Font.SourceSansSemibold
-goto_2.Text = "soon"
-goto_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-goto_2.TextSize = 14.000
+TextLabel_11.Parent = localply
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.Position = UDim2.new(0.25151515, 0, 0.329312474, 0)
+TextLabel_11.Size = UDim2.new(0, 234, 0, 33)
+TextLabel_11.Font = Enum.Font.SourceSans
+TextLabel_11.Text = "https://discord.gg/JgFWGpeSk4"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 14.000
+TextLabel_11.TextWrapped = true
 
 -- Scripts:
 
