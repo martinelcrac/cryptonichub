@@ -335,7 +335,7 @@ TextLabel.Position = UDim2.new(-0.0554185919, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 187, 0, 24)
 TextLabel.Font = Enum.Font.SourceSansBold
 TextLabel.Text = "CRYPTONIC <font color=\"#FFA500\">Hub</font>"
-TextLabel.Text.RichText = true
+TextLabel.RichText = true
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
@@ -1090,3 +1090,5 @@ local function MDVGS_fake_script() -- MainFrame.welcome
 	
 end
 coroutine.wrap(MDVGS_fake_script)()
+
+
