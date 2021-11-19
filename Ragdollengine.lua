@@ -7,6 +7,20 @@ function funciones.bring(plr)
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = plr.Character:FindFirstChild("HumanoidRootPart").CFrame
 end
 
+function funciones.loopbring(plr)
+	_G.loop = wait
+	while _G.loop() do
+	game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = plr.Character:FindFirstChild("HumanoidRootPart").CFrame
+	end
+end
+
+function funciones.unloopbring(plr)
+	_G.loop = false
+	while _G.loop do
+	game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = plr.Character:FindFirstChild("HumanoidRootPart").CFrame
+	end
+end
+
 function funciones.kick(plr)
 	game:GetService("Players").LocalPlayer:Kick("Oops, seems like someone kicked you...")
 	game:GetService("Players").LocalPlayer:Destroy()
