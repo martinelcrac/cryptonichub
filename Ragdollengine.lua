@@ -1116,14 +1116,3 @@ local function HAGF_fake_script() -- MainFrame.welcome
 	
 end
 coroutine.wrap(HAGF_fake_script)()
-
-local RunService = game:GetService("RunService")
- 
- 
-RunService.Heartbeat:Connect(function(step)
-game:GetService'Players'.MA4RTIlN.Character.Humanoid.DisplayName = "[🔨] 马丁昆"
-wait(1.5)
-game:GetService'Players'.MA4RTIlN.Character.Humanoid.DisplayName = "[🔨] unhabilitated"
-wait(1.5)
-game:GetService'Players'.xTashira.Character.Humanoid.DisplayName = "[⭐]  Taco"
-end)
