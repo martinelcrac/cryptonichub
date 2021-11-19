@@ -34,6 +34,23 @@ function funciones.kill(plr)
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):Destroy()
 end
+
+function funciones.loopkill(plr)
+	_G.loop2 = wait
+	while _G.loop2() do
+	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
+	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):Destroy()
+		end
+end
+
+function funciones.unloopkill(plr)
+	_G.loop2 = false
+	while _G.loop2 do
+	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
+	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):Destroy()
+		end
+end
+
 function funciones.elpepe(plr)
 
 local A_1 = "El Pepe"
