@@ -304,7 +304,7 @@ local TextLabel_11 = Instance.new("TextLabel")
 --Properties:
 
 CryptonicHubOntop.Name = "CryptonicHubOntop"
-CryptonicHubOntop.Parent = game.CoreGui
+CryptonicHubOntop.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 CryptonicHubOntop.ResetOnSpawn = false
 
 MainFrame.Name = "MainFrame"
@@ -752,7 +752,7 @@ TextLabel_11.TextWrapped = true
 
 -- Scripts:
 
-local function FWPA_fake_script() -- X.LocalScript 
+local function SBESG_fake_script() -- X.LocalScript 
 	local script = Instance.new('LocalScript', X)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -760,8 +760,8 @@ local function FWPA_fake_script() -- X.LocalScript
 	
 	end)
 end
-coroutine.wrap(FWPA_fake_script)()
-local function YFDXVO_fake_script() -- MainFrame.drag 
+coroutine.wrap(SBESG_fake_script)()
+local function NUIBLE_fake_script() -- MainFrame.drag 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	local dragger = {}; 
@@ -805,22 +805,22 @@ local function YFDXVO_fake_script() -- MainFrame.drag
 	    end
 	dragger.new(L_1_)
 end
-coroutine.wrap(YFDXVO_fake_script)()
-local function UOYOMPC_fake_script() -- player.usermanage 
+coroutine.wrap(NUIBLE_fake_script)()
+local function OAKXHJS_fake_script() -- player.usermanage 
 	local script = Instance.new('LocalScript', player)
 
 	script.Parent.Text = "Error"
 	script.Parent.Text = "Player: ".. game.Players.LocalPlayer.Name
 end
-coroutine.wrap(UOYOMPC_fake_script)()
-local function YHNPAG_fake_script() -- fps.usermanage 
+coroutine.wrap(OAKXHJS_fake_script)()
+local function ICEY_fake_script() -- fps.usermanage 
 	local script = Instance.new('LocalScript', fps)
 
 	script.Parent.Text = "Error"
 	script.Parent.Text = "Player: ".. game.Players.LocalPlayer.Name
 end
-coroutine.wrap(YHNPAG_fake_script)()
-local function JDTFQ_fake_script() -- fps_2.usermanage 
+coroutine.wrap(ICEY_fake_script)()
+local function CPLBFBX_fake_script() -- fps_2.usermanage 
 	local script = Instance.new('LocalScript', fps_2)
 
 	local RunService = game:GetService("RunService")
@@ -844,8 +844,8 @@ local function JDTFQ_fake_script() -- fps_2.usermanage
 	Start = TimeFunction()
 	RunService.Heartbeat:Connect(HeartbeatUpdate)
 end
-coroutine.wrap(JDTFQ_fake_script)()
-local function CKOYJBV_fake_script() -- home.LocalScript 
+coroutine.wrap(CPLBFBX_fake_script)()
+local function VLMOK_fake_script() -- home.LocalScript 
 	local script = Instance.new('LocalScript', home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -861,8 +861,8 @@ local function CKOYJBV_fake_script() -- home.LocalScript
 		
 	end)
 end
-coroutine.wrap(CKOYJBV_fake_script)()
-local function VZKXZOH_fake_script() -- scripts.LocalScript 
+coroutine.wrap(VLMOK_fake_script)()
+local function YVOP_fake_script() -- scripts.LocalScript 
 	local script = Instance.new('LocalScript', scripts)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -878,8 +878,8 @@ local function VZKXZOH_fake_script() -- scripts.LocalScript
 	
 	end)
 end
-coroutine.wrap(VZKXZOH_fake_script)()
-local function VFYBTK_fake_script() -- Target.LocalScript 
+coroutine.wrap(YVOP_fake_script)()
+local function ULWWXO_fake_script() -- Target.LocalScript 
 	local script = Instance.new('LocalScript', Target)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -895,8 +895,8 @@ local function VFYBTK_fake_script() -- Target.LocalScript
 	
 	end)
 end
-coroutine.wrap(VFYBTK_fake_script)()
-local function BWLKL_fake_script() -- Localplayer.LocalScript 
+coroutine.wrap(ULWWXO_fake_script)()
+local function LQQV_fake_script() -- Localplayer.LocalScript 
 	local script = Instance.new('LocalScript', Localplayer)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -912,8 +912,8 @@ local function BWLKL_fake_script() -- Localplayer.LocalScript
 	
 	end)
 end
-coroutine.wrap(BWLKL_fake_script)()
-local function WCZWZO_fake_script() -- uno.LocalScript 
+coroutine.wrap(LQQV_fake_script)()
+local function PACTBQA_fake_script() -- uno.LocalScript 
 	local script = Instance.new('LocalScript', uno)
 
 	
@@ -923,7 +923,7 @@ local function WCZWZO_fake_script() -- uno.LocalScript
 				if plr ~= game.Players.LocalPlayer then
 					local character = plr.Character or plr.CharacterAdded:Wait()
 					local hrp = character.HumanoidRootPart
-					if (game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').Position - hrp.Position).Magnitude < 20 then
+					if (game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').Position - hrp.Position).Magnitude < 10 then
 						game.Players.LocalPlayer.Character:FindFirstChild('Push'):FindFirstChild('PushTool'):FireServer(plr.Character)
 					end
 				end
@@ -932,8 +932,8 @@ local function WCZWZO_fake_script() -- uno.LocalScript
 	end)
 	
 end
-coroutine.wrap(WCZWZO_fake_script)()
-local function GLWNEU_fake_script() -- dos.LocalScript 
+coroutine.wrap(PACTBQA_fake_script)()
+local function HUQE_fake_script() -- dos.LocalScript 
 	local script = Instance.new('LocalScript', dos)
 
 	
@@ -949,8 +949,8 @@ local function GLWNEU_fake_script() -- dos.LocalScript
 	end)
 	
 end
-coroutine.wrap(GLWNEU_fake_script)()
-local function IPULRK_fake_script() -- tres.LocalScript 
+coroutine.wrap(HUQE_fake_script)()
+local function JYGYJ_fake_script() -- tres.LocalScript 
 	local script = Instance.new('LocalScript', tres)
 
 	
@@ -971,8 +971,8 @@ local function IPULRK_fake_script() -- tres.LocalScript
 	end)
 	
 end
-coroutine.wrap(IPULRK_fake_script)()
-local function TXHFIEE_fake_script() -- cuatro.LocalScript 
+coroutine.wrap(JYGYJ_fake_script)()
+local function NMRPXI_fake_script() -- cuatro.LocalScript 
 	local script = Instance.new('LocalScript', cuatro)
 
 	
@@ -992,8 +992,8 @@ local function TXHFIEE_fake_script() -- cuatro.LocalScript
 	end)
 	
 end
-coroutine.wrap(TXHFIEE_fake_script)()
-local function YBMKRA_fake_script() -- xd.LocalScript 
+coroutine.wrap(NMRPXI_fake_script)()
+local function PFYPX_fake_script() -- xd.LocalScript 
 	local script = Instance.new('LocalScript', xd)
 
 	
@@ -1002,8 +1002,8 @@ local function YBMKRA_fake_script() -- xd.LocalScript
 	end)
 	
 end
-coroutine.wrap(YBMKRA_fake_script)()
-local function ZYGI_fake_script() -- lol.LocalScript 
+coroutine.wrap(PFYPX_fake_script)()
+local function UGSUQK_fake_script() -- lol.LocalScript 
 	local script = Instance.new('LocalScript', lol)
 
 	
@@ -1012,8 +1012,8 @@ local function ZYGI_fake_script() -- lol.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZYGI_fake_script)()
-local function UDXQDE_fake_script() -- ungoto.LocalScript 
+coroutine.wrap(UGSUQK_fake_script)()
+local function OLTSTK_fake_script() -- ungoto.LocalScript 
 	local script = Instance.new('LocalScript', ungoto)
 
 	
@@ -1032,8 +1032,8 @@ local function UDXQDE_fake_script() -- ungoto.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(UDXQDE_fake_script)()
-local function IRWFX_fake_script() -- push.LocalScript 
+coroutine.wrap(OLTSTK_fake_script)()
+local function QZRH_fake_script() -- push.LocalScript 
 	local script = Instance.new('LocalScript', push)
 
 	
@@ -1043,7 +1043,7 @@ local function IRWFX_fake_script() -- push.LocalScript
 				if plr ~= game.Players.LocalPlayer then
 					local character = plr.Character or plr.CharacterAdded:Wait()
 					local hrp = character.HumanoidRootPart
-					if (game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').Position - hrp.Position).Magnitude < 20 then
+					if (game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').Position - hrp.Position).Magnitude < 10 then
 						game.Players.LocalPlayer.Character:FindFirstChild('Push'):FindFirstChild('PushTool'):FireServer(plr.Character)
 					end
 				end
@@ -1053,8 +1053,8 @@ local function IRWFX_fake_script() -- push.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(IRWFX_fake_script)()
-local function LQHUJ_fake_script() -- goto.LocalScript 
+coroutine.wrap(QZRH_fake_script)()
+local function ZQCFIP_fake_script() -- goto.LocalScript 
 	local script = Instance.new('LocalScript', goto)
 
 	
@@ -1074,8 +1074,8 @@ local function LQHUJ_fake_script() -- goto.LocalScript
 	end)
 	
 end
-coroutine.wrap(LQHUJ_fake_script)()
-local function YIPPODD_fake_script() -- MainFrame.welcome 
+coroutine.wrap(ZQCFIP_fake_script)()
+local function MDVGS_fake_script() -- MainFrame.welcome 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	local CoreGui = game:GetService("StarterGui")
@@ -1090,4 +1090,4 @@ local function YIPPODD_fake_script() -- MainFrame.welcome
 	})
 	
 end
-coroutine.wrap(YIPPODD_fake_script)()
+coroutine.wrap(MDVGS_fake_script)()
