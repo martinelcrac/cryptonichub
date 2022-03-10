@@ -1,5 +1,5 @@
 # cryptonichub
-Cryptonic hub made by martiin#0015 wmw#7622 and demvkrao#0069
+Cryptonic hub made by martiin#0015 metaa#0001 and demvkrao#0069
 
 
 Discord:
